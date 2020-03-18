@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="product"
+            type="com.dsw.bag.dswbag.model.Product" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/products"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="16dp"
+            android:text="Product"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="12dp"
+            android:text="Product"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/products" />
+
+        <TextView
+            android:id="@+id/quantity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/price"
+            app:layout_constraintTop_toBottomOf="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="300dp"
+            android:layout_marginRight="300dp"
+            android:text="Quantity" />
+
+        <TextView
+            android:id="@+id/price"
+            app:layout_constraintStart_toStartOf="@+id/product"
+            app:layout_constraintTop_toBottomOf="@+id/product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Price" />
+
+        <TextView
+            android:id="@+id/p_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/products"
+            app:layout_constraintTop_toTopOf="@+id/product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="231dp"
+            android:layout_marginEnd="16dp"
+            android:text="@{product.displayName}" />
+
+        <TextView
+            android:id="@+id/p_price"
+            app:layout_constraintEnd_toEndOf="@+id/p_name"
+            app:layout_constraintTop_toTopOf="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{product.price}" />
+
+        <TextView
+            android:id="@+id/p_quantity"
+            app:layout_constraintEnd_toEndOf="@+id/p_price"
+            app:layout_constraintTop_toTopOf="@+id/quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{product.quantity.toString()}" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

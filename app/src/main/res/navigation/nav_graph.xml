@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dsw_bag_fragment">
+    <fragment
+        android:id="@+id/dsw_bag_fragment"
+        android:name="com.dsw.bag.dswbag.DSWBagFragment"
+        android:label="fragment_d_s_w_bagfragment"
+        tools:layout="@layout/fragment_dsw_bagfragment" />
+</navigation>
